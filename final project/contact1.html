@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor Talking Machine Company - Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="./css/style4.css">
+  <script src="./js/header.js"></script>
+  <script src="./js/footer.js"></script>
+  <script src="./js/resp.js"></script>
+  <script type="text/javascript" src="./js/myjs.js"></script>
+  <!-- adding our fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&family=Josefin+Sans:ital,wght@0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Lobster&family=Oswald:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Preahvihear&family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="header-container"></div>
+ 
+    
+  <script>
+    // Insert the header content into the header container
+    document.getElementById('header-container').innerHTML = headerContent;
+  </script>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Section for the masthead with a background image -->
+    <section class="masthead">
+      <div >
+        <!-- Heading for the masthead section -->
+        <h1>Contact Us</h1>
+      </div>
+    </section>
+
+    <!-- Contact form section -->
+    <section class="contact-form-section">
+      <div class="contact-form-container">
+        <h2>Get in Touch</h2>
+        <p>If you have any questions, inquiries, or feedback, please feel free to reach out to us. We'd love to hear from you!</p>
+        <form class="contact-form" action="submit_form.php" method="post">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="password" name="password" placeholder="enter you password" required >
+         
+          <label for="query">Choose a query</label>
+          <select id="query" name="query" onchange="toggleFileSelector()">
+            <option value="wrongorder">Wrong Order</option>
+            <option value="notdelivered">Not Delivered</option>
+            <option value="damaged">Damaged</option>
+            <option value="other">Other</option>
+          </select>
+          <p id="fileSelection" style="display: none;">
+            <label for="damageFile">Select a file for damage evidence:</label>
+            <input type="file" id="damageFile" name="damageFile">
+          </p>
+          <p id="otherText" style="display: none;">
+            Then write it below:
+            <input type="text" id="otherInput" name="otherInput">
+          </p>
+            <textarea name="message" placeholder="Your Message"  cols="30" rows="6" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contact details section -->
+<section class="contact-details-section">
+  <div class="contact-details-container">
+    <h2>Contact Information</h2>
+    <p>If you prefer to get in touch with us directly, you can use the following contact details:</p>
+    <ul>
+      <li><strong>Address:</strong> 123 Main Street, Camden, New Jersey, 08000</li>
+      <li>
+        <strong>Email:</strong>
+        <span id="emailDetails" onclick="toggleContactInfo('email')">Click to view</span>
+        <span id="emailContent" style="display: none;">info@victortalkingmachine.com</span>
+      </li>
+      <li>
+        <strong>Phone:</strong>
+        <span id="phoneDetails" onclick="toggleContactInfo('phone')">Click to view</span>
+        <span id="phoneContent" style="display: none;">+1 (555) 123-4567</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+
+  <div id="footer-container"></div><script>
+    // Insert the footer content into the footer container
+    document.getElementById('footer-container').innerHTML = footerContent;
+  </script>
+
+</body>
+
+</html>

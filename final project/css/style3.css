@@ -1,0 +1,30 @@
+ /* styling the section containing form  */
+ .contact{
+    display: flex;
+    background-color: #afa2a2;
+    
+  }
+
+  /* styling the heading contact us  */
+  .text-center{
+    padding-top: 100px;
+    padding-left: 80px;
+     width:50%;
+    align-content: center;
+  }
+ 
+/* styling our form */
+.form{
+  width: 22%;
+  margin: 20px auto;
+}
+
+.form-input{
+  margin: 14px 0;
+  padding: 4px 10px;
+  width: 100%; 
+  font-size: 11px;
+  border: 2px solid grey;
+  border-radius: 6px;
+ 
+}
